@@ -1,0 +1,43 @@
+
+<img ng-repeat="item in maincontent" ng-src="{{item.image}}" data-aos="fade-up"/>
+<div id="aboutme"></div> <!--Якорь, чтобы не закрывала панель навигации-->
+<div class="content-container" data-aos="fade-up">
+    <h3>Обо мне</h3>
+    <div class="about-me">
+        <div class="avatar">
+            <img ng-src="{{aboutme.avatar}}"/>
+        </div>
+        {{aboutme.text}}
+    </div>
+</div>
+<div id="contacts"></div> <!--Якорь, чтобы не закрывала панель навигации-->
+<div id="contacts" class="content-container" data-aos="fade-up">
+    <h3>Контакты</h3>
+    <div class="contacts">
+        Связаться со мной можно через социальные сети:
+        <a href="{{contacts.vkontakte.link}}">
+            <img ng-src="{{contacts.vkontakte.icon}}"/>
+        </a>
+        <a href="{{contacts.instagram.link}}">
+            <img ng-src="{{contacts.instagram.icon}}"/>
+        </a>,
+        <br/>
+        электронную почту                    
+        <a href="">
+            <img ng-src="{{contacts.email.icon}}"/>
+            {{contacts.email.link}}
+        </a>
+        <br/>
+        или по телефону: <p style="font-size: 25px;">{{contacts.phone}}</p>
+    </div>
+</div>
+<div id="comments" class="content-container" data-aos="fade-up">
+    <h3>Отзывы</h3>
+    <div class="comments">
+        <div id="vk_comments"></div>
+    </div>
+</div>
+
+<script>
+    InitializeComments();
+</script>

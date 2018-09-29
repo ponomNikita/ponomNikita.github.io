@@ -1,0 +1,258 @@
+@font-face {
+    font-family: 'header-font';
+    src: url('header-font.ttf')  format('truetype')
+  }
+
+@font-face {
+    font-family: 'regular';
+    src: url('regular.woff')  format('woff')
+  }
+
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    background-image: url("static/images/background.png");
+    min-width: 500px;
+    min-height: 400px;
+    font-family: regular cursive !important;
+    font-size: 16px;
+}
+
+a, a:hover {
+    text-decoration: none !important;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    font-family: header-font !important;
+    font-size: 45px !important;
+    color: rgb(253, 253, 253) !important;
+    line-height: 1.2;
+    --text-border-color: #76797f;
+    text-shadow: 
+        2px 0 0 var(--text-border-color),
+        -2px 0 0 var(--text-border-color),
+        0 2px 0 var(--text-border-color), 
+        0 -2px 0 var(--text-border-color), 
+        1px 1px var(--text-border-color), 
+        -1px -1px 0 var(--text-border-color), 
+        1px -1px 0 var(--text-border-color), 
+        -1px 1px 0 var(--text-border-color);    
+}
+
+.app {
+    display: grid;
+    height: 100%;
+}
+
+.app {
+    grid-template-rows: 30% 7% auto 5%;
+}
+
+.centered-wrapper {
+    height: 100%;
+    width: 100%;
+    display: table;
+}
+
+.centered {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.header {
+    grid-row: 1;
+    display: flex;
+}
+
+.header img {
+  max-width: 100%;
+  height: 100%;
+}
+
+.centered-column {
+    display: flex;
+    justify-content: center; 
+    flex-direction: column;
+    height: 100%;
+}
+  
+.navigation {
+    grid-row: 2;
+    background-image: url("static/images/navigation.png");
+    background-color: #76797f;
+    background-size: cover;
+    display: flex;
+    justify-content: center; 
+    flex-direction: row;
+    z-index: 99;
+}
+
+.navigation ul {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+}
+
+.navigation li {
+    border-left: 1px solid #d6d8e4f5;
+    display: inline-block;
+    width: 100px;
+    height: 100%;
+    text-align: center;
+    font-family: regular cursive !important;
+    font-size: 17px;
+    color: #ffffff;
+}
+
+.navigation li:hover {
+    box-shadow: inset 0px 0px 5px 250px rgba(78, 76, 76, 0.288);
+    transition: box-shadow 600ms ease-in-out;
+    cursor: pointer;
+}
+
+.navigation li:last-child {
+    border-right: 1px solid #d6d8e4f5;
+}
+
+.content {
+    grid-row: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content > img {
+    width: 70%;
+    border: 10px solid #ffffff;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.content-container {
+    width: 70%;
+    margin-top: 70px;
+}
+
+.about-me, .contacts {
+    border: 10px solid #ffffff;
+    border-radius: 5px;
+    padding: 50px;
+    background-color: white;
+    text-align: justify;
+}
+
+.comments {
+    margin-bottom: 50px;
+}
+
+.avatar {
+    height: 100px;
+    width: 100px;
+    border: 10px solid white;
+    border-radius: 50%;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+}
+
+.avatar > img {
+    width: 100%;
+    height: auto;
+}
+
+.contacts {
+    text-align: center;
+}
+
+.contacts img {
+    width: 50px;
+}
+
+.gallery {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 10px solid #ffffff;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.gallery img:hover{
+    cursor: pointer;
+    box-shadow: 0 1px 8px black;
+    transition: box-shadow 400ms ease-in-out;
+    transform: scale(1.05, 1.05);
+    transition: transform 400ms ease-in-out;
+}
+
+.image-wrapper { 
+    margin-top:20px; 
+}
+
+.footer {
+    grid-row: 4;
+    background-color: white;
+    border-top: 10px solid #ffffff;
+    bborder-top-left-radius: 10px;
+    bborder-top-right-radius: 10px;
+    margin-top: 30px;
+    text-align: center;
+    min-height: 30px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 10%;
+    justify-content: left; 
+}
+
+@media (device-width: 720px) { 
+    h1 {        
+        font-size: 25px !important;
+    }
+
+    .header {
+        min-height: 70px;
+    }
+
+    .navigation li {
+        width: 70px;
+        font-size: 12px;
+    }
+}
+
+@media screen {
+    .app {
+        grid-template-rows: 30% 7% auto 5%;
+    }
+}
+
+@media handheld and (orientation: landscape){
+    .app {
+        grid-template-rows: 30% 7% auto 5%;
+    }       
+}
+
+@media handheld and (orientation: portrait){
+    .app {
+        grid-template-rows: 5% 7% auto 5%;
+    }       
+}
+
+@media (device-width: 960px) { 
+}
+
+@media (device-width: 1140px) { 
+
+}
