@@ -3,5 +3,4 @@ app.controller("GalleryController", function($scope, $window, configurationProvi
     
     var configuration = configurationProvider.getGalleryConfiguration();
     $scope.gallery = configuration['gallery-content'];
-
 });
