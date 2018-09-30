@@ -7,6 +7,11 @@ app.config(function($routeProvider) {
         })
         .when("/gallery", {
             templateUrl : "app/views/gallery.html",
-            controller: "GalleryController"
+            controller: "GalleryController",
+            resolve: {
+                "GalleryConfigurationData": function (configurationProvider) {
+                    return configurationProvider.promise;
+                }
+            }
         });
 });
