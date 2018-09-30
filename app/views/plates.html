@@ -1,0 +1,48 @@
+
+<style>
+.line {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 3px;
+}
+
+.column {
+    flex: 33.33%;
+    max-width: 33.33%;
+    padding: 0 3px;
+}
+
+.column img {
+    width: 100%;
+    margin-top: 8px;
+    vertical-align: middle;
+    object-fit: contain;
+    border-radius: 5px;
+    border: solid 2px white
+}
+
+plates {
+    width: 70%;
+    margin-top: 50px;
+    padding-bottom: 10px;
+}
+
+@media screen and (max-width: 800px) {
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+@media (min-height: 960px) { 
+    plates {
+        width: 90%;
+    }
+}
+
+</style>
+<div class="line">
+  <div ng-repeat="col in columns" class="column">
+    <img ng-repeat="image in col.images" ng-src="{{image}}" data-aos="fade-up" />
+  </div>
+</div>

@@ -1,0 +1,56 @@
+{
+    "base-gallery-url": "static/gallery",
+    "gallery-content": [
+        {
+            "name": "set_1",
+            "images": [
+                "/Set_1/Set1_1.jpg",
+                "/Set_1/Set1_2.jpg",
+                "/Set_1/Set1_3.jpg"
+            ]
+        },
+        {
+            "name": "set_2",
+            "images": [
+                "/Set_2/Set2_1.jpg",
+                "/Set_2/Set2_2.jpg",
+                "/Set_2/Set2_3.jpg",
+                "/Set_2/Set2_4.jpg",
+                "/Set_2/Set2_5.jpg",
+                "/Set_2/Set2_6.jpg"
+            ]
+        },
+        {
+            "name": "set_3",
+            "images": [
+                "/Set_3/Set3_1.jpg",
+                "/Set_3/Set3_2.jpg",
+                "/Set_3/Set3_3.jpg"
+            ]
+        },
+        {
+            "name": "set_4",
+            "images": [
+                "/Set_4/Set4_1.jpg",
+                "/Set_4/Set4_2.jpg",
+                "/Set_4/Set4_3.jpg"
+            ]
+        },
+        {
+            "name": "set_5",
+            "images": [
+                "/Set_5/Set5_1.jpg",
+                "/Set_5/Set5_2.jpg",
+                "/Set_5/Set5_3.jpg"
+            ]
+        },
+        {
+            "name": "set_6",
+            "images": [
+                "/Set_6/Set6_1.jpg",
+                "/Set_6/Set6_2.jpg",
+                "/Set_6/Set6_3.jpg"
+            ]
+        }
+    ]
+}
