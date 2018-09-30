@@ -25,6 +25,4 @@ app.controller('PlatesController', function($scope) {
             images: $scope.images.slice(columnSize * 2, imagesCount)
         }
     ];
-    console.log($scope.columns);   
-
 });
