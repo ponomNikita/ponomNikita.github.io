@@ -18,5 +18,6 @@ app.controller("ContentController", function($scope, configurationProvider) {
     if (configuration != null) {
         $scope.aboutme = configuration['aboutme'];
         $scope.contacts = configuration['contacts'];
+        $scope.plates = configuration['plates']
     }    
 });

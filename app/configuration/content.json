@@ -1,20 +1,20 @@
 {
     "plates": [
-        "static/images/plates/1.jpg",
-        "static/images/plates/2.jpg",
-        "static/images/plates/3.jpg",
-        "static/images/plates/4.jpg",
-        "static/images/plates/5.jpg",
-        "static/images/plates/6.jpg",
-        "static/images/plates/7.jpg",
-        "static/images/plates/8.jpg",
-        "static/images/plates/9.jpg",
-        "static/images/plates/10.jpg",
-        "static/images/plates/11.jpg",
-        "static/images/plates/12.jpg",
-        "static/images/plates/13.jpg",
-        "static/images/plates/14.jpg",
-        "static/images/plates/15.jpg"
+        "static/images/plates/plate1.jpg",
+        "static/images/plates/plate2.jpg",
+        "static/images/plates/plate3.jpg",
+        "static/images/plates/plate9.jpg",
+        "static/images/plates/plate4.jpg",
+        "static/images/plates/plate5.jpg",
+        "static/images/plates/plate6.jpg",
+        "static/images/plates/plate7.jpg",
+        "static/images/plates/plate8.jpg",
+        "static/images/plates/plate10.jpg",
+        "static/images/plates/plate11.jpg",
+        "static/images/plates/plate12.jpg",
+        "static/images/plates/plate13.jpg",
+        "static/images/plates/plate14.jpg",
+        "static/images/plates/plate15.jpg"
     ],
 
     "aboutme": {
