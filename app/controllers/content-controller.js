@@ -27,11 +27,11 @@ app.controller("ContentController", function($scope) {
             icon: 'static/images/vk-icon.png'
         },
         email: {
-            link: 'evponomareva_photo@gmail.com',
+            link: 'evgeniia.ponomareva@gmail.com',
             icon: 'static/images/gmail-icon.png'
         },
         instagram: {
-            link: 'https://www.instagram.com/evponomareva_photo',
+            link: 'https://www.instagram.com/evdobrolubova',
             icon: 'static/images/instagram-icon.png'
         },
         phone: "+7 (920) 002-52-58"
