@@ -1,54 +1,25 @@
-@font-face {
-    font-family: 'header-font';
-    src: url('header-font.ttf')  format('truetype')
-  }
-
-@font-face {
-    font-family: 'regular';
-    src: url('regular.woff')  format('woff')
-  }
 
 html, body {
     height: 100%;
     width: 100%;
     padding: 0px;
     margin: 0px;
-    background-image: url("static/images/background.png");
+    background: white;
     min-width: 500px;
     min-height: 400px;
-    font-family: regular cursive !important;
-    font-size: 16px;
+    font-family: Montserrat, sans-serif !important;
+    font-size: 18px;
 }
 
 a, a:hover {
     text-decoration: none !important;
 }
 
-h1, h2, h3 {
-    text-align: center;
-    font-family: header-font !important;
-    font-size: 45px !important;
-    color: rgb(253, 253, 253) !important;
-    line-height: 1.2;
-    --text-border-color: #76797f;
-    text-shadow: 
-        2px 0 0 var(--text-border-color),
-        -2px 0 0 var(--text-border-color),
-        0 2px 0 var(--text-border-color), 
-        0 -2px 0 var(--text-border-color), 
-        1px 1px var(--text-border-color), 
-        -1px -1px 0 var(--text-border-color), 
-        1px -1px 0 var(--text-border-color), 
-        -1px 1px 0 var(--text-border-color);    
-}
-
-.app {
-    display: grid;
-    height: 100%;
-}
-
-.app {
-    grid-template-rows: 30% 7% auto 5%;
+h1 {
+    font-size: 2rem !important;
+    font-family: arial, sans-serif !important;
+    letter-spacing: 5px;
+    line-height: 2 !important;
 }
 
 .centered-wrapper {
@@ -63,18 +34,30 @@ h1, h2, h3 {
     text-align: center;
 }
 
-.header {
-    grid-row: 1;
-    display: flex;
-    justify-content: flex-start;
+.slider { 
+    box-shadow: 0 1px 8px black;
 }
 
-.header img {
-    width: 30%;
-    height: 100%;
-    object-fit: contain;
-    object-position: left;
+.slider img {	
+    object-fit: cover !important;
+    height: 100vh !important;
+    background: black;
+    opacity: 0.75;    
 }
+
+.header {
+    color: white;
+    position: absolute;
+    text-align: center;
+    width: 50vw;
+    height: 50vh;
+    top: 50vh;
+    left: 50vw;
+    margin-top: -15vh;
+    margin-left: -25vw;
+    font-size: 0.6rem;
+}
+
 
 .centered-column {
     display: flex;
@@ -84,14 +67,26 @@ h1, h2, h3 {
 }
   
 .navigation {
-    grid-row: 2;
-    background-image: url("static/images/navigation.png");
-    background-color: #76797f;
+    height: 5vh;
+    width: 100%;
     background-size: cover;
     display: flex;
     justify-content: center; 
     flex-direction: row;
-    z-index: 99;
+    position: absolute;
+    top: 0;
+}
+
+.navigation-fixed {
+    height: 7vh;
+    position: fixed;
+    background: white;
+    border-bottom: 1px solid #d6d8e4f5;
+    z-index: 100;
+}
+
+.navigation-fixed li {
+    color: black !important;
 }
 
 .navigation ul {
@@ -101,28 +96,23 @@ h1, h2, h3 {
 }
 
 .navigation li {
-    border-left: 1px solid #d6d8e4f5;
+    border-top: 2px solid transparent;
     display: inline-block;
     width: 100px;
     height: 100%;
     text-align: center;
-    font-family: regular cursive !important;
-    font-size: 17px;
+    font-family: Montserrat, sans-serif !important;
+    font-size: 1rem;
     color: #ffffff;
 }
 
 .navigation li:hover {
-    box-shadow: inset 0px 0px 5px 250px rgba(78, 76, 76, 0.288);
-    transition: box-shadow 600ms ease-in-out;
+    border-top: 2px solid red;
+    text-decoration: underline;
     cursor: pointer;
 }
 
-.navigation li:last-child {
-    border-right: 1px solid #d6d8e4f5;
-}
-
 .content {
-    grid-row: 3;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -138,6 +128,7 @@ h1, h2, h3 {
 .content-container {
     width: 70%;
     margin-top: 70px;
+    border-bottom: 1px dashed #d6d8e4f5
 }
 
 .about-me, .contacts {
@@ -191,6 +182,7 @@ h1, h2, h3 {
     height: 100%;
     object-fit: cover;
     border: 10px solid #ffffff;
+    box-shadow: 0 1px 1px black;
     border-radius: 5px;
     margin: 5px;
 }
@@ -204,7 +196,6 @@ h1, h2, h3 {
 }
 
 .footer {
-    grid-row: 4;
     background-color: white;
     border-top: 10px solid #ffffff;
     bborder-top-left-radius: 10px;
@@ -233,22 +224,4 @@ h1, h2, h3 {
 /**************************************/
 
 @media (device-width: 720px) { 
-    h1 {        
-        font-size: 25px !important;
-    }
-
-    .header {
-        min-height: 70px;
-    }
-
-    .navigation li {
-        width: 70px;
-        font-size: 12px;
-    }
-}
-
-@media (min-height: 960px) { 
-    .app {
-        grid-template-rows: 10% 5% auto 5%;
-    }
 }

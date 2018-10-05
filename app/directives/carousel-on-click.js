@@ -26,6 +26,16 @@ app.directive('carouselOnClick', function($uibModal) {
         }                                                                                    
     }}); 
 
+app.directive('carousel', function($uibModal) {                                                      
+    return {                                                                                 
+        restrict: 'E',                                                                       
+        scope: {                                                                             
+            images: "="                                                           
+        },   
+        templateUrl: 'app/views/carousel.html',
+        controller: 'CarouselController'                                                                  
+    }}); 
+
 app.controller('CarouselController', function($scope) {
 
 });

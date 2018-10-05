@@ -28,18 +28,18 @@
     <script type="text/javascript" src="app/directives/plates.js"></script>
     <script type="text/javascript" src="app/providers/configuration-provider.js"></script>
     
-    <body ng-controller="HomeController" class="app" >
-        <div id="header" class="header" ng-if="modules.header.visable"> 
-            <img src="static/images/header.png"/>
-            <h1 class="centered-column">Евгения Пономарева<br/>фотограф</h1>
-		</div>
+    <body ng-controller="HomeController" >
+        <carousel images="sliderImages" class="slider"></carousel>
         <div id="navigation" class="navigation" ng-if="modules.navigation.visable">
             <ul>
-                <li><div class="centered-column" go-to scroll-to="#header" redirect-to="/">Главная</div></li>
+                <li><div class="centered-column" go-to scroll-to=".slider" redirect-to="/">Главная</div></li>
                 <li><div class="centered-column" go-to redirect-to="/gallery">Галерея</div></li>
                 <li><div class="centered-column" go-to scroll-to="#comments" redirect-to="/">Отзывы</div></li>
                 <li><div class="centered-column" go-to scroll-to="#contacts" redirect-to="/">Контакты</div></li> 
             </ul>
+        </div>
+        <div class="header" data-aos="fade-up" data-aos-duration="1500">
+            <h1>Евгения Пономарева<br/>Фотограф</h1>
         </div>
         <div ng-view class="content" ng-if="modules.content.visable" ng-controller="ContentController"></div>
         <div class="footer" ng-if="modules.footer.visable">&reg;Ponomarev Studio - ponom.nikita@gmail.com</div>
@@ -59,13 +59,13 @@
             window.onresize = function(event) { onWindowResizing(); };  
 
             var navigation = $(".navigation");
-            var sticky = navigation.offset().top;
+            var sticky = $(window).height() * 0.3; 
 
             function onWindowScrolling() {
                 if (window.pageYOffset > sticky) {
-                    navigation.addClass("sticky");
+                    navigation.addClass("navigation-fixed");
                 } else {
-                    navigation.removeClass("sticky");
+                    navigation.removeClass("navigation-fixed");
                 }
             }
 
