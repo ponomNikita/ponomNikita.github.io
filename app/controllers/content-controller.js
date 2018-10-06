@@ -1,5 +1,5 @@
 
-app.controller("ContentController", function($scope, configurationProvider) {
+app.controller("ContentController", function($scope, $window, configurationProvider) {
 
     var configuration = configurationProvider.getContentConfiguration();
 
@@ -20,4 +20,7 @@ app.controller("ContentController", function($scope, configurationProvider) {
         $scope.contacts = configuration['contacts'];
         $scope.plates = configuration['plates']
     }    
+
+
+    $('.navigation').removeClass('navigation-fixed')
 });

@@ -23,25 +23,22 @@
     <script type="text/javascript" src="app/controllers/home-controller.js"></script>
     <script type="text/javascript" src="app/controllers/content-controller.js"></script>
     <script type="text/javascript" src="app/controllers/gallery-controller.js"></script>
+    <script type="text/javascript" src="app/controllers/comments-controller.js"></script>
     <script type="text/javascript" src="app/directives/carousel-on-click.js"></script>
     <script type="text/javascript" src="app/directives/go-to.js"></script>
     <script type="text/javascript" src="app/directives/plates.js"></script>
     <script type="text/javascript" src="app/providers/configuration-provider.js"></script>
     
-    <body ng-controller="HomeController" class="app" >
-        <div id="header" class="header" ng-if="modules.header.visable"> 
-            <img src="static/images/header.png"/>
-            <h1 class="centered-column">Евгения Пономарева<br/>фотограф</h1>
-		</div>
+    <body ng-controller="HomeController" >
         <div id="navigation" class="navigation" ng-if="modules.navigation.visable">
             <ul>
-                <li><div class="centered-column" go-to scroll-to="#header" redirect-to="/">Главная</div></li>
+                <li><div class="centered-column" go-to scroll-to=".slider" redirect-to="/">Главная</div></li>
                 <li><div class="centered-column" go-to redirect-to="/gallery">Галерея</div></li>
-                <li><div class="centered-column" go-to scroll-to="#comments" redirect-to="/">Отзывы</div></li>
                 <li><div class="centered-column" go-to scroll-to="#contacts" redirect-to="/">Контакты</div></li> 
+                <li><div class="centered-column" go-to scroll-to="#comments" redirect-to="/comments">Отзывы</div></li>
             </ul>
         </div>
-        <div ng-view class="content" ng-if="modules.content.visable" ng-controller="ContentController"></div>
+        <div ng-view></div>
         <div class="footer" ng-if="modules.footer.visable">&reg;Ponomarev Studio - ponom.nikita@gmail.com</div>
     </body>
 
@@ -52,26 +49,5 @@
         }
 
         AOS.init();
-        
-        $(document).ready(function() {
-
-            window.onscroll = function() { onWindowScrolling(); }; 
-            window.onresize = function(event) { onWindowResizing(); };  
-
-            var navigation = $(".navigation");
-            var sticky = navigation.offset().top;
-
-            function onWindowScrolling() {
-                if (window.pageYOffset > sticky) {
-                    navigation.addClass("sticky");
-                } else {
-                    navigation.removeClass("sticky");
-                }
-            }
-
-            function onWindowResizing() {
-                sticky = navigation.offset().top;
-            }
-        });
     </script>
 </html>
