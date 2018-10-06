@@ -23,13 +23,13 @@
     <script type="text/javascript" src="app/controllers/home-controller.js"></script>
     <script type="text/javascript" src="app/controllers/content-controller.js"></script>
     <script type="text/javascript" src="app/controllers/gallery-controller.js"></script>
+    <script type="text/javascript" src="app/controllers/comments-controller.js"></script>
     <script type="text/javascript" src="app/directives/carousel-on-click.js"></script>
     <script type="text/javascript" src="app/directives/go-to.js"></script>
     <script type="text/javascript" src="app/directives/plates.js"></script>
     <script type="text/javascript" src="app/providers/configuration-provider.js"></script>
     
     <body ng-controller="HomeController" >
-        <carousel images="sliderImages" class="slider"></carousel>
         <div id="navigation" class="navigation" ng-if="modules.navigation.visable">
             <ul>
                 <li><div class="centered-column" go-to scroll-to=".slider" redirect-to="/">Главная</div></li>
@@ -38,15 +38,7 @@
                 <li><div class="centered-column" go-to scroll-to="#comments" redirect-to="/comments">Отзывы</div></li>
             </ul>
         </div>
-        <div class="header" data-aos="fade-up" data-aos-duration="1500">
-            <h1>ЕВГЕНИЯ ПОНОМАРЕВА <br/>
-                <span class="small-h1">ФОТОГРАФ</span>
-            </h1>
-            <h2>
-                <span class="small-h2">cтудийные и прогулочные фотосесcии <br/> в Нижнем Новгороде</span>
-            </h2>
-        </div>
-        <div ng-view class="content" ng-if="modules.content.visable" ng-controller="ContentController"></div>
+        <div ng-view></div>
         <div class="footer" ng-if="modules.footer.visable">&reg;Ponomarev Studio - ponom.nikita@gmail.com</div>
     </body>
 
@@ -57,26 +49,5 @@
         }
 
         AOS.init();
-        
-        $(document).ready(function() {
-
-            window.onscroll = function() { onWindowScrolling(); }; 
-            window.onresize = function(event) { onWindowResizing(); };  
-
-            var navigation = $(".navigation");
-            var sticky = $(window).height() * 0.5; 
-
-            function onWindowScrolling() {
-                if (window.pageYOffset > sticky) {
-                    navigation.addClass("navigation-fixed");
-                } else {
-                    navigation.removeClass("navigation-fixed");
-                }
-            }
-
-            function onWindowResizing() {
-                sticky = navigation.offset().top;
-            }
-        });
     </script>
 </html>

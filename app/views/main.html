@@ -1,25 +1,59 @@
-<plates class="content-container" images="plates"></plates>
-<div id="contacts"></div> <!--Якорь, чтобы не закрывала панель навигации-->
-<div id="contacts" class="content-container" data-aos="fade-up">
-    <h3>Контакты</h3>
-    <div class="contacts">
-        <img ng-src="{{aboutme.avatar}}" data-aos="fade-right" data-aos-duration="1000"/>
-        <div class="contacts-data" data-aos="fade-left" data-aos-duration="1000">
-            <div>
-                Россия, Нижний Новгород <br/>
-                {{contacts.phone}} <br/>
-                (WhatsUp, Viber) <br/>
-                <a href="">{{contacts.email.link}}</a>
-            </div>
-            <div>
-                Социальные сети:<br/>
-                <a href="{{contacts.vkontakte.link}}">
-                    <img ng-src="{{contacts.vkontakte.icon}}"/>
-                </a>
-                <a href="{{contacts.instagram.link}}">
-                    <img ng-src="{{contacts.instagram.icon}}"/>
-                </a>
+<carousel images="sliderImages" class="slider"></carousel>
+<div class="header" data-aos="fade-up" data-aos-duration="1500">
+    <h1>ЕВГЕНИЯ ПОНОМАРЕВА <br/>
+        <span class="small-h1">ФОТОГРАФ</span>
+    </h1>
+    <h2>
+        <span class="small-h2">cтудийные и прогулочные фотосесcии <br/> в Нижнем Новгороде</span>
+    </h2>
+</div>
+<div class="content" ng-if="modules.content.visable" >
+    <plates class="content-container" images="plates"></plates>
+    <div id="contacts"></div> <!--Якорь, чтобы не закрывала панель навигации-->
+    <div id="contacts" class="content-container" data-aos="fade-up">
+        <h3>Контакты</h3>
+        <div class="contacts">
+            <img ng-src="{{aboutme.avatar}}" data-aos="fade-right" data-aos-duration="1000"/>
+            <div class="contacts-data" data-aos="fade-left" data-aos-duration="1000">
+                <div>
+                    Россия, Нижний Новгород <br/>
+                    {{contacts.phone}} <br/>
+                    (WhatsUp, Viber) <br/>
+                    <a href="">{{contacts.email.link}}</a>
+                </div>
+                <div>
+                    Социальные сети:<br/>
+                    <a href="{{contacts.vkontakte.link}}">
+                        <img ng-src="{{contacts.vkontakte.icon}}"/>
+                    </a>
+                    <a href="{{contacts.instagram.link}}">
+                        <img ng-src="{{contacts.instagram.icon}}"/>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+<script>        
+    $(document).ready(function() {
+
+        window.onscroll = function() { onWindowScrolling(); }; 
+        window.onresize = function(event) { onWindowResizing(); };  
+
+        var navigation = $(".navigation");
+        var sticky = $(window).height() * 0.5; 
+
+        function onWindowScrolling() {
+            if (window.pageYOffset > sticky) {
+                navigation.addClass("navigation-fixed-on-scroll");
+            } else {
+                navigation.removeClass("navigation-fixed-on-scroll");
+            }
+        }
+
+        function onWindowResizing() {
+            sticky = navigation.offset().top;
+        }
+    });
+</script>

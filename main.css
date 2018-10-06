@@ -75,7 +75,6 @@ h3 {
     margin-left: -25vw;
 }
 
-
 .centered-column {
     display: flex;
     justify-content: center; 
@@ -92,9 +91,10 @@ h3 {
     flex-direction: row;
     position: absolute;
     top: 0;
+    z-index: 100;
 }
 
-.navigation-fixed {
+.navigation-fixed, .navigation-fixed-on-scroll {
     height: 9vh;
     position: fixed;
     background: white;
@@ -102,7 +102,7 @@ h3 {
     z-index: 100;
 }
 
-.navigation-fixed li {
+.navigation-fixed li, .navigation-fixed-on-scroll li {
     color: black !important;
 }
 

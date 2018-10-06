@@ -12,7 +12,7 @@ app.config(function($routeProvider) {
         })
         .when("/comments", {
             templateUrl : "app/views/comments.html",
-            controller: "ContentController"
+            controller: "CommentsController"
         })
         .when("/gallery", {
             templateUrl : "app/views/gallery.html",
