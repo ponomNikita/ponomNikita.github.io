@@ -187,7 +187,8 @@ h3 {
 }
 
 .contacts > img {
-    width: 50vh;
+    max-height: 30vw;
+    width: auto
 }
 
 .contacts a > img {
