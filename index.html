@@ -39,7 +39,12 @@
             </ul>
         </div>
         <div class="header" data-aos="fade-up" data-aos-duration="1500">
-            <h1>Евгения Пономарева<br/>Фотограф</h1>
+            <h1>ЕВГЕНИЯ ПОНОМАРЕВА <br/>
+                <span class="small-h1">ФОТОГРАФ</span>
+            </h1>
+            <h2>
+                <span class="small-h2">cтудийные и прогулочные фотосесcии <br/> в Нижнем Новгороде</span>
+            </h2>
         </div>
         <div ng-view class="content" ng-if="modules.content.visable" ng-controller="ContentController"></div>
         <div class="footer" ng-if="modules.footer.visable">&reg;Ponomarev Studio - ponom.nikita@gmail.com</div>
@@ -59,7 +64,7 @@
             window.onresize = function(event) { onWindowResizing(); };  
 
             var navigation = $(".navigation");
-            var sticky = $(window).height() * 0.3; 
+            var sticky = $(window).height() * 0.5; 
 
             function onWindowScrolling() {
                 if (window.pageYOffset > sticky) {

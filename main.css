@@ -16,10 +16,24 @@ a, a:hover {
 }
 
 h1 {
-    font-size: 2rem !important;
-    font-family: arial, sans-serif !important;
+    font-size: 1.5rem !important;
+    font-family: Georgia, sans-serif !important;
     letter-spacing: 5px;
-    line-height: 2 !important;
+    line-height: 1.5 !important;
+}
+
+h2 {
+    font-size: 1.2rem !important;
+    font-family: Georgia, sans-serif !important;
+    letter-spacing: 2px;
+}
+
+.small-h1 {
+    font-size: 1.2rem !important;    
+}
+
+.small-h2 {
+    font-size: 1rem !important;    
 }
 
 .centered-wrapper {
@@ -55,7 +69,6 @@ h1 {
     left: 50vw;
     margin-top: -15vh;
     margin-left: -25vw;
-    font-size: 0.6rem;
 }
 
 
@@ -78,7 +91,7 @@ h1 {
 }
 
 .navigation-fixed {
-    height: 7vh;
+    height: 9vh;
     position: fixed;
     background: white;
     border-bottom: 1px solid #d6d8e4f5;
