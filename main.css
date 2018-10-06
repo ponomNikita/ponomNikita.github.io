@@ -7,7 +7,7 @@ html, body {
     background: white;
     min-width: 500px;
     min-height: 400px;
-    font-family: Montserrat, sans-serif !important;
+    font-family: Georgia, sans-serif !important;
     font-size: 18px;
 }
 
@@ -17,15 +17,19 @@ a, a:hover {
 
 h1 {
     font-size: 1.5rem !important;
-    font-family: Georgia, sans-serif !important;
     letter-spacing: 5px;
     line-height: 1.5 !important;
 }
 
 h2 {
     font-size: 1.2rem !important;
-    font-family: Georgia, sans-serif !important;
     letter-spacing: 2px;
+}
+
+h3 {
+    font-size: 1.5rem !important;
+    letter-spacing: 2px;
+    text-align: center;
 }
 
 .small-h1 {
@@ -140,14 +144,14 @@ h2 {
 
 .content-container {
     width: 70%;
-    margin-top: 70px;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
     border-bottom: 1px dashed #d6d8e4f5
 }
 
 .about-me, .contacts {
     border: 10px solid #ffffff;
     border-radius: 5px;
-    padding: 50px;
     background-color: white;
     text-align: justify;
 }
@@ -156,27 +160,25 @@ h2 {
     margin-bottom: 50px;
 }
 
-.avatar {
-    height: 100px;
-    width: 100px;
-    border: 10px solid white;
-    border-radius: 50%;
-    position: absolute;
-    left: 20px;
-    top: 10px;
-}
-
-.avatar > img {
-    width: 100%;
-    height: auto;
-}
-
 .contacts {
     text-align: center;
+    display: flex;
+    justify-content: space-between;
 }
 
-.contacts img {
-    width: 50px;
+.contacts-data {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.contacts > img {
+    width: 50vh;
+}
+
+.contacts a > img {
+    width: 5vh;
 }
 
 .gallery {
