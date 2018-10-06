@@ -37,5 +37,7 @@ app.directive('carousel', function($uibModal) {
     }}); 
 
 app.controller('CarouselController', function($scope) {
-
+    $('.carousel').carousel({
+      interval: 2500
+    })
 });
