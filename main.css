@@ -146,7 +146,7 @@ h3 {
     width: 70%;
     padding-top: 10vh;
     padding-bottom: 10vh;
-    border-bottom: 1px dashed #d6d8e4f5
+    border-bottom: 1px dashed #d6d8e4f5;
 }
 
 .about-me, .contacts {
@@ -157,7 +157,20 @@ h3 {
 }
 
 .comments {
-    margin-bottom: 50px;
+    margin-top: 20vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px dashed #d6d8e4f5;
+    padding-bottom: 10vh;
+}
+
+.comments div {
+    max-width: 70vw;
+    border-right: 1px solid #d6d8e4f5;
+    border-left: 1px solid #d6d8e4f5;
+    border-radius: 10%;
 }
 
 .contacts {
@@ -211,10 +224,6 @@ h3 {
 }
 
 .footer {
-    background-color: white;
-    border-top: 10px solid #ffffff;
-    bborder-top-left-radius: 10px;
-    bborder-top-right-radius: 10px;
     margin-top: 30px;
     text-align: center;
     min-height: 30px;
