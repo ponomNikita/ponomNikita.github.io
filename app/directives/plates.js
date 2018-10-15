@@ -19,19 +19,14 @@ app.controller('PlatesController', function($scope, $window) {
 
     $scope.columns = [];
 
-    var addedCount = 0;
     for (var i = 0; i < columnCount; i++) {
-
-        var countToAdd = columnSize;
-
-        if (addedCount + columnSize * 2 > imagesCount) {
-            countToAdd = imagesCount - addedCount;
+        $scope.columns[i] = {
+            images: []
         }
-
-        $scope.columns.push({
-            images:  $scope.images.slice(addedCount, addedCount + countToAdd)
-        });
-
-        addedCount += countToAdd;
     }
+
+    for (var i = 0; i < imagesCount; i++) {
+        $scope.columns[i % columnCount].images.push($scope.images[i]);
+    }
+
 });
