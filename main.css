@@ -245,6 +245,7 @@ h3 {
 #hamburger {
     margin: 8px;
     min-height: 5vh;
+    outline:0;
 }
 
 #hamburger:hover,
@@ -258,6 +259,47 @@ h3 {
 
 /**************************************/
 
+@media screen and (max-width: 980px) and (max-height: 1524px) {
+     /* Mobiles */
+     #hamburger {
+        padding: 10px;
+        min-height: 7vh;
+        min-width: 7vh;
+    }
 
-@media (device-width: 720px) { 
+    .navbar-brand {
+        font-size: 2rem !important;
+    }
+
+    .navbar {
+        font-size: 2rem;
+    }
+
+    h1 {
+        font-size: 2rem !important;
+    }
+
+    h2 {
+        font-size: 1.5rem !important;
+    }
+
+    h3 {
+        font-size: 2rem !important;
+    }
+
+    .small-h1 {
+        font-size: 1.5rem !important;    
+    }
+
+    .small-h2 {
+        font-size: 1.3rem !important;    
+    }
+
+    body {
+        font-size: 1.3rem !important;
+    }
+
+    .navbar-dark .navbar-toggler-icon{
+        padding: 30px !important;
+    }
 }
