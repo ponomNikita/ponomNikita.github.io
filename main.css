@@ -202,28 +202,24 @@ h3 {
     margin-right: 3%;
  }
 
-
-/**************************************/
-
-@media (device-width: 720px) { 
-}
-
 .navbar {
     padding: 0 !important;
     margin-bottom: 0;
-    background-color: #f4511e;
     z-index: 9999;
     border: 0;
     font-size: 1rem;
     letter-spacing: 4px;
     border-radius: 0;
-    border-bottom: 1px solid #d6d8e4f5;
     letter-spacing: 1px;
+    color: #ffffff !important;
+}
+
+.navbar.bg-dark {
+    background-color: rgba(0, 0, 0, 0.6) !important;
 }
 
 .navbar li,
 .navbar .navbar-brand {
-    color: #000000 !important;
     text-align: center;
     border-top: 2px solid transparent;
 }
@@ -234,7 +230,7 @@ h3 {
 
 .show li:hover,
 .show li.active {
-    background-color: #FFFFFF !important;
+    background-color: rgba(0, 0, 0, 0.2) !important;
     border-top: none !important;
     text-decoration: none !important;
 }
@@ -244,11 +240,6 @@ h3 {
     border-top: 2px solid red;
     text-decoration: underline;
     cursor: pointer;
-}
-
-.navbar-default .navbar-toggle {
-    border-color: transparent;
-    color: #ffffff;
 }
 
 #hamburger {
@@ -262,4 +253,11 @@ h3 {
 
 #hamburger:focus {
     list-style: none;
+}
+
+
+/**************************************/
+
+
+@media (device-width: 720px) { 
 }

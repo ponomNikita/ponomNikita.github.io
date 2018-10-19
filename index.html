@@ -30,7 +30,7 @@
     <script type="text/javascript" src="app/providers/configuration-provider.js"></script>
     
     <body ng-controller="HomeController" >
-        <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-light">
+        <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark">
             <div class="container">
                 <a class="navbar-brand" href="#">Евгения Пономарева</a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myNavbar" id="hamburger">
@@ -39,7 +39,7 @@
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav ml-auto">
                         <li class="nav-item py-3 px-1" go-to scroll-to=".slider" redirect-to="/">Главная</li>
-                        <li class="nav-item py-3 px-1" go-to redirect-to="/gallery">Галерея</li>
+                        <li class="nav-item py-3 px-1" go-to scroll-to="#gallery" redirect-to="/gallery">Галерея</li>
                         <li class="nav-item py-3 px-1" go-to scroll-to="#contacts" redirect-to="/">Контакты</li>
                         <li class="nav-item py-3 px-1" go-to scroll-to="#comments" redirect-to="/comments">Отзывы</li>
                     </ul>

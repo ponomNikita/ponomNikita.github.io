@@ -1,7 +1,6 @@
 <carousel images="sliderImages" class="slider"></carousel>
 <div class="header" data-aos="fade-up" data-aos-duration="1500">
-    <h1>ЕВГЕНИЯ ПОНОМАРЕВА <br/>
-        <span class="small-h1">ФОТОГРАФ</span>
+    <h1>ФОТОГРАФ ПО ЖИЗНИ
     </h1>
     <h2>
         <span class="small-h2">cтудийные и прогулочные фотосесcии <br/> в Нижнем Новгороде</span>
@@ -37,29 +36,11 @@
 
 <script>        
     $(document).ready(function() {
-
-        window.onscroll = function() { onWindowScrolling(); }; 
-        window.onresize = function(event) { onWindowResizing(); };  
-
-        var navigation = $(".navigation");
-        var sticky = $(window).height() * 0.5; 
-        
+       
         var hamburger = document.getElementById('hamburger');
         
         $(hamburger).click(function() {
             $(this).toggleClass('is-active');
         })
-
-        function onWindowScrolling() {
-            if (window.pageYOffset > sticky) {
-                navigation.addClass("navigation-fixed-on-scroll");
-            } else {
-                navigation.removeClass("navigation-fixed-on-scroll");
-            }
-        }
-
-        function onWindowResizing() {
-            sticky = navigation.offset().top;
-        }
     });
 </script>
