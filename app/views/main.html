@@ -43,6 +43,12 @@
 
         var navigation = $(".navigation");
         var sticky = $(window).height() * 0.5; 
+        
+        var hamburger = document.getElementById('hamburger');
+        
+        $(hamburger).click(function() {
+            $(this).toggleClass('is-active');
+        })
 
         function onWindowScrolling() {
             if (window.pageYOffset > sticky) {

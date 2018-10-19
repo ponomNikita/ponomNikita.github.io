@@ -30,14 +30,30 @@
     <script type="text/javascript" src="app/providers/configuration-provider.js"></script>
     
     <body ng-controller="HomeController" >
-        <div id="navigation" class="navigation" ng-if="modules.navigation.visable">
+       <!-- <div id="navigation" class="navigation" ng-if="modules.navigation.visable">
             <ul>
                 <li><div class="centered-column" go-to scroll-to=".slider" redirect-to="/">Главная</div></li>
                 <li><div class="centered-column" go-to redirect-to="/gallery">Галерея</div></li>
                 <li><div class="centered-column" go-to scroll-to="#contacts" redirect-to="/">Контакты</div></li> 
                 <li><div class="centered-column" go-to scroll-to="#comments" redirect-to="/comments">Отзывы</div></li>
             </ul>
-        </div>
+        </div> -->
+        <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">Евгения Пономарева</a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myNavbar" id="hamburger">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item py-3 px-1" go-to scroll-to=".slider" redirect-to="/">Главная</li>
+                        <li class="nav-item py-3 px-1" go-to redirect-to="/gallery">Галерея</li>
+                        <li class="nav-item py-3 px-1" go-to scroll-to="#contacts" redirect-to="/">Контакты</li>
+                        <li class="nav-item py-3 px-1" go-to scroll-to="#comments" redirect-to="/comments">Отзывы</li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
         <div ng-view></div>
         <div class="footer" ng-if="modules.footer.visable">&reg;Ponomarev Studio - ponom.nikita@gmail.com</div>
     </body>

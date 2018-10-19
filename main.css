@@ -82,52 +82,7 @@ h3 {
     height: 100%;
 }
   
-.navigation {
-    height: 5vh;
-    width: 100%;
-    background-size: cover;
-    display: flex;
-    justify-content: center; 
-    flex-direction: row;
-    position: absolute;
-    top: 0;
-    z-index: 100;
-}
 
-.navigation-fixed, .navigation-fixed-on-scroll {
-    height: 9vh;
-    position: fixed;
-    background: white;
-    border-bottom: 1px solid #d6d8e4f5;
-    z-index: 100;
-}
-
-.navigation-fixed li, .navigation-fixed-on-scroll li {
-    color: black !important;
-}
-
-.navigation ul {
-    margin: 0;
-    padding: 0;
-    font-size: 0;
-}
-
-.navigation li {
-    border-top: 2px solid transparent;
-    display: inline-block;
-    width: 100px;
-    height: 100%;
-    text-align: center;
-    font-family: Montserrat, sans-serif !important;
-    font-size: 1rem;
-    color: #ffffff;
-}
-
-.navigation li:hover {
-    border-top: 2px solid red;
-    text-decoration: underline;
-    cursor: pointer;
-}
 
 .content {
     display: flex;
@@ -251,4 +206,60 @@ h3 {
 /**************************************/
 
 @media (device-width: 720px) { 
+}
+
+.navbar {
+    padding: 0 !important;
+    margin-bottom: 0;
+    background-color: #f4511e;
+    z-index: 9999;
+    border: 0;
+    font-size: 1rem;
+    letter-spacing: 4px;
+    border-radius: 0;
+    border-bottom: 1px solid #d6d8e4f5;
+    letter-spacing: 1px;
+}
+
+.navbar li,
+.navbar .navbar-brand {
+    color: #000000 !important;
+    text-align: center;
+    border-top: 2px solid transparent;
+}
+
+.navbar-brand {
+    margin: 10px;
+}
+
+.show li:hover,
+.show li.active {
+    background-color: #FFFFFF !important;
+    border-top: none !important;
+    text-decoration: none !important;
+}
+
+.navbar-nav li:hover,
+.navbar-nav li.active {
+    border-top: 2px solid red;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #ffffff;
+}
+
+#hamburger {
+    margin: 8px;
+    min-height: 5vh;
+}
+
+#hamburger:hover,
+#hamburger.is-active {
+}
+
+#hamburger:focus {
+    list-style: none;
 }
