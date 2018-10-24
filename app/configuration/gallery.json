@@ -46,12 +46,17 @@
                 "/Set_9/Set9_5.jpg"
             ]
         },
-        {
-            "name": "set_12",
+		{
+            "name": "set_10",
             "images": [
-                "/Set_12/Set12_1.jpg",
-                "/Set_12/Set12_2.jpg",
-                "/Set_12/Set12_3.jpg"
+                "/Set_10/Set10_1.jpg",
+                "/Set_10/Set10_2.jpg",
+                "/Set_10/Set10_3.jpg",
+				"/Set_10/Set10_4.jpg",
+				"/Set_10/Set10_5.jpg",
+				"/Set_10/Set10_6.jpg",
+				"/Set_10/Set10_7.jpg",
+				"/Set_10/Set10_8.jpg"
             ]
         },
         {
@@ -83,13 +88,12 @@
                 "/Set_5/Set5_3.jpg"
             ]
         },
-        {
-            "name": "set_10",
+		        {
+            "name": "set_12",
             "images": [
-                "/Set_10/Set10_1.jpg",
-                "/Set_10/Set10_2.jpg",
-                "/Set_10/Set10_3.jpg",
-				"/Set_10/Set10_4.jpg"
+                "/Set_12/Set12_1.jpg",
+                "/Set_12/Set12_2.jpg",
+                "/Set_12/Set12_3.jpg"
             ]
         },
         {
@@ -106,7 +110,10 @@
             "images": [
                 "/Set_6/Set6_1.jpg",
                 "/Set_6/Set6_2.jpg",
-                "/Set_6/Set6_3.jpg"
+                "/Set_6/Set6_3.jpg",
+				"/Set_6/Set6_4.jpg",
+				"/Set_6/Set6_5.jpg",
+				"/Set_6/Set6_6.jpg"
             ]
         }
     ]
