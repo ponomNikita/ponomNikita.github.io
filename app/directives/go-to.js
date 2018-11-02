@@ -13,10 +13,6 @@ app.directive('goTo', [ '$location', function(location) {
                     scope.$apply(function(){                                            
                         location.path(scope.redirectTo);
                     }); 
-
-                    if (scope.redirectTo == '/'){
-                        //InitializeComments();
-                    }
                 }
 
                 if (typeof scope.scrollTo !== 'undefined') {
