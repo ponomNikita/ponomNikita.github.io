@@ -9,20 +9,24 @@ app.directive('plates', function($uibModal) {
         controller: 'PlatesController'                                                                  
     }}); 
 
-app.controller('PlatesController', function($scope) {
+app.controller('PlatesController', function($scope, $window) {
 
+    var windowWidth = $window.innerWidth;
+    var columnCount = windowWidth > 800 ? 3 : 2;
+    
     var imagesCount = $scope.images.length;
-    var columnSize = imagesCount / 3;
+    var columnSize = imagesCount / columnCount;
 
-    $scope.columns = [
-        {
-            images: $scope.images.slice(0, columnSize)
-        },
-        {
-            images: $scope.images.slice(columnSize, columnSize * 2)
-        },
-        {
-            images: $scope.images.slice(columnSize * 2, imagesCount)
+    $scope.columns = [];
+
+    for (var i = 0; i < columnCount; i++) {
+        $scope.columns[i] = {
+            images: []
         }
-    ];
+    }
+
+    for (var i = 0; i < imagesCount; i++) {
+        $scope.columns[i % columnCount].images.push($scope.images[i]);
+    }
+
 });

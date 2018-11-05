@@ -2,7 +2,12 @@
 <html lang="en" ng-app="app">
 <head>
     <meta charset="utf-8">
-    <title>Фотограф Евгения Пономарева</title>
+    <meta name="yandex-verification" content="f2d99a88e83261d7" />
+    <meta name="google-site-verification" content="QvCOMs0nuY2HESQY65xqZmZQulHBezpIw4RKsqHuGoA" />
+    <meta name="description" content="Фотограф Евгения Пономарева. Студийные и прогулочные фотосесcии
+в Нижнем Новгороде">
+    <meta name="p:domain_verify" content="a19dc0f0ed0aafdc54a17146fdf8d8b7"/>
+    <title>Фотограф Евгения Пономарева (Нижний Новгород)</title>
 
     <link rel="stylesheet" href="main.css">  
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">  
@@ -23,25 +28,30 @@
     <script type="text/javascript" src="app/controllers/home-controller.js"></script>
     <script type="text/javascript" src="app/controllers/content-controller.js"></script>
     <script type="text/javascript" src="app/controllers/gallery-controller.js"></script>
+    <script type="text/javascript" src="app/controllers/comments-controller.js"></script>
     <script type="text/javascript" src="app/directives/carousel-on-click.js"></script>
     <script type="text/javascript" src="app/directives/go-to.js"></script>
     <script type="text/javascript" src="app/directives/plates.js"></script>
     <script type="text/javascript" src="app/providers/configuration-provider.js"></script>
     
-    <body ng-controller="HomeController" class="app" >
-        <div id="header" class="header" ng-if="modules.header.visable"> 
-            <img src="static/images/header.png"/>
-            <h1 class="centered-column">Евгения Пономарева<br/>фотограф</h1>
-		</div>
-        <div id="navigation" class="navigation" ng-if="modules.navigation.visable">
-            <ul>
-                <li><div class="centered-column" go-to scroll-to="#header" redirect-to="/">Главная</div></li>
-                <li><div class="centered-column" go-to redirect-to="/gallery">Галерея</div></li>
-                <li><div class="centered-column" go-to scroll-to="#comments" redirect-to="/">Отзывы</div></li>
-                <li><div class="centered-column" go-to scroll-to="#contacts" redirect-to="/">Контакты</div></li> 
-            </ul>
-        </div>
-        <div ng-view class="content" ng-if="modules.content.visable" ng-controller="ContentController"></div>
+    <body ng-controller="HomeController" >
+        <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">Евгения Пономарева</a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myNavbar" id="hamburger">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item py-3 px-1" go-to scroll-to=".slider" redirect-to="/">Главная</li>
+                        <li class="nav-item py-3 px-1" go-to scroll-to="#gallery" redirect-to="/gallery">Галерея</li>
+                        <li class="nav-item py-3 px-1" go-to scroll-to="#contacts" redirect-to="/">Контакты</li>
+                        <li class="nav-item py-3 px-1" go-to scroll-to="#comments" redirect-to="/comments">Отзывы</li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div ng-view></div>
         <div class="footer" ng-if="modules.footer.visable">&reg;Ponomarev Studio - ponom.nikita@gmail.com</div>
     </body>
 
@@ -52,26 +62,5 @@
         }
 
         AOS.init();
-        
-        $(document).ready(function() {
-
-            window.onscroll = function() { onWindowScrolling(); }; 
-            window.onresize = function(event) { onWindowResizing(); };  
-
-            var navigation = $(".navigation");
-            var sticky = navigation.offset().top;
-
-            function onWindowScrolling() {
-                if (window.pageYOffset > sticky) {
-                    navigation.addClass("sticky");
-                } else {
-                    navigation.removeClass("sticky");
-                }
-            }
-
-            function onWindowResizing() {
-                sticky = navigation.offset().top;
-            }
-        });
     </script>
 </html>

@@ -1,41 +1,45 @@
-<div class="content-container" data-aos="fade-up">
-    <h3>Обо мне</h3>
-    <div class="about-me">
-        <div class="avatar">
-            <img ng-src="{{aboutme.avatar}}"/>
+<carousel images="sliderImages" class="slider"></carousel>
+<div class="header" data-aos="fade-up" data-aos-duration="1500">
+    <h1>ФОТОГРАФ</h1>
+    <h2>
+        <span class="small-h2">cтудийные и прогулочные фотосесcии<br/> в Нижнем Новгороде</span>
+    </h2>
+</div>
+<div class="content" ng-if="modules.content.visable" >
+    <plates class="content-container" images="plates"></plates>
+    <div id="contacts"></div> <!--Якорь, чтобы не закрывала панель навигации-->
+    <div id="contacts" class="content-container" data-aos="fade-up">
+        <h3>Контакты</h3>
+        <div class="contacts">
+            <img ng-src="{{aboutme.avatar}}" data-aos="fade-right" data-aos-duration="1000"/>
+            <div class="contacts-data" data-aos="fade-left" data-aos-duration="1000">
+                <div>
+                    Россия, Нижний Новгород <br/>
+                    {{contacts.phone}} <br/>
+                    (WhatsUp, Viber) <br/>
+                    <a href="">{{contacts.email.link}}</a>
+                </div>
+                <div>
+                    Социальные сети:<br/>
+                    <a href="{{contacts.vkontakte.link}}">
+                        <img ng-src="{{contacts.vkontakte.icon}}"/>
+                    </a>
+                    <a href="{{contacts.instagram.link}}">
+                        <img ng-src="{{contacts.instagram.icon}}"/>
+                    </a>
+                </div>
+            </div>
         </div>
-        {{aboutme.text}}
-    </div>
-</div>
-<plates images="plates"></plates>
-<div id="contacts"></div> <!--Якорь, чтобы не закрывала панель навигации-->
-<div id="contacts" class="content-container" data-aos="fade-up">
-    <h3>Контакты</h3>
-    <div class="contacts">
-        Связаться со мной можно через социальные сети:
-        <a href="{{contacts.vkontakte.link}}">
-            <img ng-src="{{contacts.vkontakte.icon}}"/>
-        </a>
-        <a href="{{contacts.instagram.link}}">
-            <img ng-src="{{contacts.instagram.icon}}"/>
-        </a>,
-        <br/>
-        электронную почту                    
-        <a href="">
-            <img ng-src="{{contacts.email.icon}}"/>
-            {{contacts.email.link}}
-        </a>
-        <br/>
-        или по телефону: <p style="font-size: 25px;">{{contacts.phone}}</p>
-    </div>
-</div>
-<div id="comments" class="content-container" data-aos="fade-up">
-    <h3>Отзывы</h3>
-    <div class="comments">
-        <div id="vk_comments"></div>
     </div>
 </div>
 
-<script>
-    InitializeComments();
+<script>        
+    $(document).ready(function() {
+       
+        var hamburger = document.getElementById('hamburger');
+        
+        $(hamburger).click(function() {
+            $(this).toggleClass('is-active');
+        })
+    });
 </script>
