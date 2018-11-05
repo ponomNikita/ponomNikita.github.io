@@ -115,6 +115,32 @@
 				"/Set_6/Set6_5.jpg",
 				"/Set_6/Set6_6.jpg"
             ]
+        },
+		{
+            "name": "set_13",
+            "images": [
+                "/Set_13/Set13_1.jpg",
+                "/Set_13/Set13_2.jpg",
+                "/Set_13/Set13_3.jpg"
+            ]
+        },
+		{
+            "name": "set_14",
+            "images": [
+                "/Set_14/Set14_1.jpg",
+                "/Set_14/Set14_2.jpg",
+                "/Set_14/Set14_3.jpg",
+				"/Set_14/Set14_4.jpg",
+				"/Set_14/Set14_5.jpg"
+            ]
+        },
+		{
+            "name": "set_15",
+            "images": [
+                "/Set_15/Set15_1.jpg",
+                "/Set_15/Set15_2.jpg",
+                "/Set_15/Set15_3.jpg"
+            ]
         }
     ]
 }
